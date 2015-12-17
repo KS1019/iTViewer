@@ -15,7 +15,7 @@
 		7C3FE6AE1C22E01A00545EAD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C3FE6AC1C22E01A00545EAD /* LaunchScreen.storyboard */; };
 		7C3FE6B91C22E01A00545EAD /* iTunesViewerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C3FE6B81C22E01A00545EAD /* iTunesViewerTests.swift */; };
 		7C3FE6C41C22E01A00545EAD /* iTunesViewerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C3FE6C31C22E01A00545EAD /* iTunesViewerUITests.swift */; };
-		7C3FE6EC1C22E29400545EAD /* Alamofire.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 7C3FE6DC1C22E19A00545EAD /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CAF140D93396757F6898294E /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0663A693035A9685189A64D1 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,62 +33,6 @@
 			remoteGlobalIDString = 7C3FE69F1C22E01A00545EAD;
 			remoteInfo = iTunesViewer;
 		};
-		7C3FE6DB1C22E19A00545EAD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7C3FE6D11C22E19A00545EAD /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F8111E3319A95C8B0040E7D1;
-			remoteInfo = "Alamofire iOS";
-		};
-		7C3FE6DD1C22E19A00545EAD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7C3FE6D11C22E19A00545EAD /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F8111E3E19A95C8B0040E7D1;
-			remoteInfo = "Alamofire iOS Tests";
-		};
-		7C3FE6DF1C22E19A00545EAD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7C3FE6D11C22E19A00545EAD /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 4DD67C0B1A5C55C900ED2280;
-			remoteInfo = "Alamofire OSX";
-		};
-		7C3FE6E11C22E19A00545EAD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7C3FE6D11C22E19A00545EAD /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F829C6B21A7A94F100A2CD59;
-			remoteInfo = "Alamofire OSX Tests";
-		};
-		7C3FE6E31C22E19A00545EAD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7C3FE6D11C22E19A00545EAD /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 4CF626EF1BA7CB3E0011A099;
-			remoteInfo = "Alamofire tvOS";
-		};
-		7C3FE6E51C22E19A00545EAD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7C3FE6D11C22E19A00545EAD /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 4CF626F81BA7CB3E0011A099;
-			remoteInfo = "Alamofire tvOS Tests";
-		};
-		7C3FE6E71C22E19A00545EAD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7C3FE6D11C22E19A00545EAD /* Alamofire.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = E4202FE01B667AA100C997FB;
-			remoteInfo = "Alamofire watchOS";
-		};
-		7C3FE6E91C22E23400545EAD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7C3FE6D11C22E19A00545EAD /* Alamofire.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
-			remoteInfo = "Alamofire iOS";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -98,7 +42,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				7C3FE6EC1C22E29400545EAD /* Alamofire.framework in Copy Frameworks */,
 			);
 			name = "Copy Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -106,6 +49,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0663A693035A9685189A64D1 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A02E193758D189454EAD2A7 /* Pods-iTunesViewer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTunesViewer.release.xcconfig"; path = "Pods/Target Support Files/Pods-iTunesViewer/Pods-iTunesViewer.release.xcconfig"; sourceTree = "<group>"; };
 		7C3FE6A01C22E01A00545EAD /* iTunesViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTunesViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C3FE6A31C22E01A00545EAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -120,7 +64,6 @@
 		7C3FE6BF1C22E01A00545EAD /* iTunesViewerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iTunesViewerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C3FE6C31C22E01A00545EAD /* iTunesViewerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesViewerUITests.swift; sourceTree = "<group>"; };
 		7C3FE6C51C22E01A00545EAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7C3FE6D11C22E19A00545EAD /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = SOURCE_ROOT; };
 		B42F5D5BFBBB5CE006BA40A0 /* Pods-iTunesViewer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTunesViewer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iTunesViewer/Pods-iTunesViewer.debug.xcconfig"; sourceTree = "<group>"; };
 		DA757FE97591469AED26286A /* Pods_iTunesViewer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iTunesViewer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -131,6 +74,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				31680F6C033403B0E2481354 /* Pods_iTunesViewer.framework in Frameworks */,
+				CAF140D93396757F6898294E /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				DA757FE97591469AED26286A /* Pods_iTunesViewer.framework */,
+				0663A693035A9685189A64D1 /* Pods.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -190,7 +135,6 @@
 				7C3FE6AA1C22E01A00545EAD /* Assets.xcassets */,
 				7C3FE6AC1C22E01A00545EAD /* LaunchScreen.storyboard */,
 				7C3FE6AF1C22E01A00545EAD /* Info.plist */,
-				7C3FE6D11C22E19A00545EAD /* Alamofire.xcodeproj */,
 			);
 			path = iTunesViewer;
 			sourceTree = "<group>";
@@ -211,20 +155,6 @@
 				7C3FE6C51C22E01A00545EAD /* Info.plist */,
 			);
 			path = iTunesViewerUITests;
-			sourceTree = "<group>";
-		};
-		7C3FE6D21C22E19A00545EAD /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				7C3FE6DC1C22E19A00545EAD /* Alamofire.framework */,
-				7C3FE6DE1C22E19A00545EAD /* Alamofire iOS Tests.xctest */,
-				7C3FE6E01C22E19A00545EAD /* Alamofire.framework */,
-				7C3FE6E21C22E19A00545EAD /* Alamofire OSX Tests.xctest */,
-				7C3FE6E41C22E19A00545EAD /* Alamofire.framework */,
-				7C3FE6E61C22E19A00545EAD /* Alamofire tvOS Tests.xctest */,
-				7C3FE6E81C22E19A00545EAD /* Alamofire.framework */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		8ED934E0948624A5245038D8 /* Pods */ = {
@@ -254,7 +184,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				7C3FE6EA1C22E23400545EAD /* PBXTargetDependency */,
 			);
 			name = iTunesViewer;
 			productName = iTunesViewer;
@@ -331,12 +260,6 @@
 			mainGroup = 7C3FE6971C22E01900545EAD;
 			productRefGroup = 7C3FE6A11C22E01A00545EAD /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 7C3FE6D21C22E19A00545EAD /* Products */;
-					ProjectRef = 7C3FE6D11C22E19A00545EAD /* Alamofire.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				7C3FE69F1C22E01A00545EAD /* iTunesViewer */,
@@ -345,58 +268,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		7C3FE6DC1C22E19A00545EAD /* Alamofire.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Alamofire.framework;
-			remoteRef = 7C3FE6DB1C22E19A00545EAD /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		7C3FE6DE1C22E19A00545EAD /* Alamofire iOS Tests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "Alamofire iOS Tests.xctest";
-			remoteRef = 7C3FE6DD1C22E19A00545EAD /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		7C3FE6E01C22E19A00545EAD /* Alamofire.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Alamofire.framework;
-			remoteRef = 7C3FE6DF1C22E19A00545EAD /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		7C3FE6E21C22E19A00545EAD /* Alamofire OSX Tests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "Alamofire OSX Tests.xctest";
-			remoteRef = 7C3FE6E11C22E19A00545EAD /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		7C3FE6E41C22E19A00545EAD /* Alamofire.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Alamofire.framework;
-			remoteRef = 7C3FE6E31C22E19A00545EAD /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		7C3FE6E61C22E19A00545EAD /* Alamofire tvOS Tests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "Alamofire tvOS Tests.xctest";
-			remoteRef = 7C3FE6E51C22E19A00545EAD /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		7C3FE6E81C22E19A00545EAD /* Alamofire.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Alamofire.framework;
-			remoteRef = 7C3FE6E71C22E19A00545EAD /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		7C3FE69E1C22E01A00545EAD /* Resources */ = {
@@ -438,7 +309,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iTunesViewer/Pods-iTunesViewer-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9C9EFB65D6BB2307B13EF538 /* Check Pods Manifest.lock */ = {
@@ -511,11 +382,6 @@
 			isa = PBXTargetDependency;
 			target = 7C3FE69F1C22E01A00545EAD /* iTunesViewer */;
 			targetProxy = 7C3FE6C01C22E01A00545EAD /* PBXContainerItemProxy */;
-		};
-		7C3FE6EA1C22E23400545EAD /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Alamofire iOS";
-			targetProxy = 7C3FE6E91C22E23400545EAD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
