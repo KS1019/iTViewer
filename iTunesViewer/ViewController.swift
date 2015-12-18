@@ -14,23 +14,27 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.getDataOfApps()
         // Do any additional setup after loading the view, typically from a nib.
-        let params = ["term":"Twitter", "country":"jp", "media":"software", "entity":"software", "limit":"25", "lang":"ja_jp"]
-        Alamofire.request(.POST, "https://itunes.apple.com/search", parameters: params)
-            .responseJSON{ response in
-                print("\(response.result.value)")
-                let json = JSON(response.result.value!)
-                if let trackName = json["results"][0]["trackName"].string {
-                    print(trackName)
-                }
-        }
+
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func getDataOfApps(){
+        let params = ["term":"Twitter", "country":"jp", "media":"software", "entity":"software", "limit":"25", "lang":"ja_jp"]
+        Alamofire.request(.POST, "https://itunes.apple.com/search", parameters: params)
+            .responseJSON{ response in
+//                print("\(response.result.value)")
+//                let json = JSON(response.result.value!)
+//                if let trackName = json["results"][0]["trackName"].string {
+//                    print(trackName)
+//                }
+    }
 
-
+  }
 }
 
