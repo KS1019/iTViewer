@@ -25,13 +25,12 @@
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="URL" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mak-Jr-Ej5">
                         <rect key="frame" x="8" y="472" width="284" height="29"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                        <color key="textColor" red="0.1764705882" green="0.71691979895104896" blue="0.4941176471" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="textColor" red="0.1764705882" green="0.86696896853146854" blue="0.4941176471" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
-            <color key="backgroundColor" red="0.0078431377190000002" green="0.65882354970000001" blue="0.9529411793" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <size key="customSize" width="147" height="489"/>
             <point key="canvasLocation" x="328" y="459.5"/>
         </collectionViewCell>
