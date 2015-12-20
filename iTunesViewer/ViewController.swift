@@ -11,6 +11,9 @@ import Alamofire
 import SwiftyJSON
 
 class ViewController: UIViewController {
+    
+    @IBOutlet var collectionViewOfApps: UICollectionView!
+
 
     override func viewDidLoad() {
         super.viewDidLoad()

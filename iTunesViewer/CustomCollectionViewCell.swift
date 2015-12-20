@@ -9,6 +9,10 @@
 import UIKit
 
 class CustomCollectionViewCell: UICollectionViewCell {
+    
+    @IBOutlet var labelOfAppName: UILabel!
+    @IBOutlet var labelOfURL: UILabel!
+    @IBOutlet var imageViewOfScreenShot: UIImageView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
