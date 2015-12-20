@@ -37,8 +37,24 @@ class ViewController: UIViewController {
 //                    print(trackName)
 //                }
 //
+            }
+        }
+    
+
+    
+    // MARK: - UICollectionViewDelegate Protocol
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        let cell:CustomCollectionViewCell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! CustomCollectionViewCell
+            return cell
+    }
+    
+    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 20;
     }
 
-  }
 }
 
