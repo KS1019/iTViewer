@@ -11,8 +11,8 @@ import UIKit
 class CustomCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet var labelOfAppName: UILabel!
-    @IBOutlet var labelOfURL: UILabel!
     @IBOutlet var imageViewOfScreenShot: UIImageView!
+    @IBOutlet var buttonOfAppStoreURL: UIButton!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,6 +24,11 @@ class CustomCollectionViewCell: UICollectionViewCell {
     }
     required init(coder aDecoder: NSCoder){
         super.init(coder: aDecoder)!
+    }
+    
+    @IBAction func URLButton(){
+        //let app:UIApplication = UIApplication.sharedApplication()
+        //app.openURL(ViewController.urlOfAppStore!)
     }
 
 }

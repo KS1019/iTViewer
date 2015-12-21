@@ -548,6 +548,7 @@
 		};
 		7C3FE6CF1C22E01A00545EAD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B42F5D5BFBBB5CE006BA40A0 /* Pods-iTunesViewer.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = iTunesViewerUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -560,6 +561,7 @@
 		};
 		7C3FE6D01C22E01A00545EAD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A02E193758D189454EAD2A7 /* Pods-iTunesViewer.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = iTunesViewerUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

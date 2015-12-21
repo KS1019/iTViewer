@@ -22,20 +22,18 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ui5-cc-7Pu">
                         <rect key="frame" x="8" y="29" width="284" height="443"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="URL" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mak-Jr-Ej5">
-                        <rect key="frame" x="8" y="472" width="284" height="29"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                        <color key="textColor" red="0.1764705882" green="0.86696896853146854" blue="0.4941176471" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zbi-B0-zJu">
+                        <rect key="frame" x="246" y="471" width="46" height="30"/>
+                        <state key="normal" title="URL"/>
+                    </button>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
             <size key="customSize" width="147" height="489"/>
             <connections>
+                <outlet property="buttonOfAppStoreURL" destination="Zbi-B0-zJu" id="Su4-bO-T6y"/>
                 <outlet property="imageViewOfScreenShot" destination="Ui5-cc-7Pu" id="fVr-2e-GlA"/>
                 <outlet property="labelOfAppName" destination="fHI-b1-lpR" id="8DX-DO-AVD"/>
-                <outlet property="labelOfURL" destination="Mak-Jr-Ej5" id="xqH-kX-iL0"/>
             </connections>
             <point key="canvasLocation" x="328" y="459.5"/>
         </collectionViewCell>
