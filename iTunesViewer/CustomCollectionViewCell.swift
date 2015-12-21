@@ -12,7 +12,7 @@ class CustomCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet var labelOfAppName: UILabel!
     @IBOutlet var imageViewOfScreenShot: UIImageView!
-    @IBOutlet var buttonOfAppStoreURL: UIButton!
+    @IBOutlet var buttonOfAppStoreURL: KeepableValueButton?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -27,8 +27,9 @@ class CustomCollectionViewCell: UICollectionViewCell {
     }
     
     @IBAction func URLButton(){
-        //let app:UIApplication = UIApplication.sharedApplication()
-        //app.openURL(ViewController.urlOfAppStore!)
+        let urlOfAppStore = NSURL(string:(buttonOfAppStoreURL?.StringValue)!)
+        let app:UIApplication = UIApplication.sharedApplication()
+        app.openURL(urlOfAppStore!)
     }
 
 }
