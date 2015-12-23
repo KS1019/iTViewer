@@ -108,6 +108,7 @@ class ViewController: UIViewController,UICollectionViewDataSource,UICollectionVi
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell:CustomCollectionViewCell = collectionView.dequeueReusableCellWithReuseIdentifier("CellOfAppInformation", forIndexPath: indexPath) as! CustomCollectionViewCell
         
+        // TODO: Fix 
         //AppNameを表示
         cell.labelOfAppName.text = self.arrayOfAppName[indexPath.row]
         
