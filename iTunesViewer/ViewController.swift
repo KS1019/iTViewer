@@ -12,7 +12,8 @@ import SwiftyJSON
 
 class ViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate{
     
-    @IBOutlet var collectionViewOfApps: UICollectionView!
+    //@IBOutlet 
+    var collectionViewOfApps: UICollectionView!
     
     var arrayOfAppName:[String?] = []
     
@@ -27,6 +28,8 @@ class ViewController: UIViewController,UICollectionViewDataSource,UICollectionVi
         
         self.getDataOfApps()
         
+        
+        
         // Do any additional setup after loading the view, typically from a nib.
         
     }
@@ -37,9 +40,17 @@ class ViewController: UIViewController,UICollectionViewDataSource,UICollectionVi
     }
     
     func setCollectionView(){
+        
+        let layout = UICollectionViewFlowLayout()
+        layout.sectionInset = UIEdgeInsetsMake(10, 10, 10, 10)
+        layout.itemSize = CGSizeMake(50, 50)
+        
+        collectionViewOfApps = UICollectionView(frame: self.view.frame, collectionViewLayout: layout)
         collectionViewOfApps.registerClass(CustomCollectionViewCell.self, forCellWithReuseIdentifier: "CellOfAppInformation")
         collectionViewOfApps.delegate = self
         collectionViewOfApps.dataSource = self
+        
+        self.view.addSubview(collectionViewOfApps)
 
     }
     
