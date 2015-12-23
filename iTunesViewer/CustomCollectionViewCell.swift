@@ -27,7 +27,7 @@ class CustomCollectionViewCell: UICollectionViewCell {
     }
     
     @IBAction func URLButton(){
-        let urlOfAppStore = NSURL(string:(buttonOfAppStoreURL?.StringValue)!)
+        let urlOfAppStore = NSURL(string:(buttonOfAppStoreURL?.loadURLButtonHave())!)
         let app:UIApplication = UIApplication.sharedApplication()
         app.openURL(urlOfAppStore!)
     }

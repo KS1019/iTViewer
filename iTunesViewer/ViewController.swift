@@ -14,7 +14,7 @@ class ViewController: UIViewController,UICollectionViewDataSource,UICollectionVi
     
     @IBOutlet var collectionViewOfApps: UICollectionView!
     
-    var arrayOfAppName:[String] = []
+    var arrayOfAppName:[String?] = []
     
     var itunesURL:NSMutableString = "http://appstore.com/"
     var appNameForURL = NSString()
@@ -85,15 +85,15 @@ class ViewController: UIViewController,UICollectionViewDataSource,UICollectionVi
                         print("arrayOfAppStoreURL -> \(self.arrayOfAppStoreURL)")
                     }
                     
-                    //スクリーンショットを取得
+                    //スクリーンショットのURLを取得
                     if let URLOfScreenShot = resultOfRequest["screenshotUrls"][0].string {
-                        print("\(URLOfScreenShot)")
+                        print("URLOfScreenShot -> \(URLOfScreenShot)")
                         self.arrayOfURLOfScreenShot.append("\(URLOfScreenShot)")
-                        print("\(self.arrayOfURLOfScreenShot)")
+                        print("arrayOfURLOfScreenShot -> \(self.arrayOfURLOfScreenShot) Count -> \(self.arrayOfURLOfScreenShot.count)")
                     }
                 }
         }
-        let delay = 10.0 * Double(NSEC_PER_SEC)
+        let delay = 5.0 * Double(NSEC_PER_SEC)
         let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
         dispatch_after(time, dispatch_get_main_queue(), {
             print( "5秒後の世界" )
@@ -108,17 +108,20 @@ class ViewController: UIViewController,UICollectionViewDataSource,UICollectionVi
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell:CustomCollectionViewCell = collectionView.dequeueReusableCellWithReuseIdentifier("CellOfAppInformation", forIndexPath: indexPath) as! CustomCollectionViewCell
         
-        // TODO: Fix 
+        // TODO: Fix
         //AppNameを表示
-        cell.labelOfAppName.text = self.arrayOfAppName[indexPath.row]
+        cell.labelOfAppName?.text = self.arrayOfAppName[indexPath.row]! as String
         
         //スクリーンショットを表示
-        let urlOfScreenShots = self.arrayOfURLOfScreenShot[indexPath.row]
-        let req = NSURLRequest(URL:NSURL(string: urlOfScreenShots)!)
-        NSURLConnection.sendAsynchronousRequest(req, queue:NSOperationQueue.mainQueue()){(res, data, err) in
-            let image = UIImage(data:data!)
-            // 画像に対する処理 (UcellのUIImageViewに表示する等)
-            cell.imageViewOfScreenShot.image = image
+        let url = NSURL(string:self.arrayOfURLOfScreenShot[indexPath.row] as String)
+        let imgData: NSData?
+        
+        do {
+            imgData = try NSData(contentsOfURL:url!,options: NSDataReadingOptions.DataReadingMappedIfSafe)
+            let img:UIImage = UIImage(data:imgData!)!;
+            cell.imageViewOfScreenShot?.image = img
+        } catch {
+            print("Error: can't create image.")
         }
         
         cell.buttonOfAppStoreURL?.StringValue = self.arrayOfAppStoreURL[indexPath.row]
@@ -132,7 +135,7 @@ class ViewController: UIViewController,UICollectionViewDataSource,UICollectionVi
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 20;
+        return 10;
     }
     
 }

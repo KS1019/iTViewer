@@ -19,5 +19,10 @@ class KeepableValueButton: UIButton {
     */
     
     var StringValue:String = ""
+    
+    func loadURLButtonHave() -> String{
+        return StringValue
+        
+    }
 
 }
