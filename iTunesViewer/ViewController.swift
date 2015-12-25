@@ -178,7 +178,7 @@ class ViewController: UIViewController,UICollectionViewDataSource,UICollectionVi
         print("numberOfItemsInSection \(self.arrayOfAppName.count)")
         return self.arrayOfAppName.count
     }
-    
+    // TODO: Replace UICollectiovew to TableView
     
     
 }
