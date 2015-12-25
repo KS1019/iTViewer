@@ -32,6 +32,7 @@
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
+            <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
             <size key="customSize" width="147" height="489"/>
             <connections>
                 <outlet property="buttonOfAppStoreURL" destination="Zbi-B0-zJu" id="Su4-bO-T6y"/>

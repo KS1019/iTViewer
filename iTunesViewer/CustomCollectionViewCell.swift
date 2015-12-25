@@ -21,6 +21,9 @@ class CustomCollectionViewCell: UICollectionViewCell {
     
     override init(frame: CGRect){
         super.init(frame: frame)
+        labelOfAppName = UILabel()
+        imageViewOfScreenShot = UIImageView()
+        buttonOfAppStoreURL = KeepableValueButton?()
     }
     required init(coder aDecoder: NSCoder){
         super.init(coder: aDecoder)!
