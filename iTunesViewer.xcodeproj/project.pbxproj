@@ -18,6 +18,8 @@
 		7C67493D1C23F76900822596 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C67493B1C23F76900822596 /* CustomCollectionViewCell.swift */; };
 		7C67493E1C23F76900822596 /* CustomCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C67493C1C23F76900822596 /* CustomCollectionViewCell.xib */; };
 		7C6749401C284A4B00822596 /* KeepableValueButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C67493F1C284A4B00822596 /* KeepableValueButton.swift */; };
+		7C80530E1C2FD23100F6A2D4 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C80530C1C2FD23100F6A2D4 /* CustomTableViewCell.swift */; };
+		7C80530F1C2FD23100F6A2D4 /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C80530D1C2FD23100F6A2D4 /* CustomTableViewCell.xib */; };
 		CAF140D93396757F6898294E /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0663A693035A9685189A64D1 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +72,8 @@
 		7C67493B1C23F76900822596 /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
 		7C67493C1C23F76900822596 /* CustomCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCollectionViewCell.xib; sourceTree = "<group>"; };
 		7C67493F1C284A4B00822596 /* KeepableValueButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeepableValueButton.swift; sourceTree = "<group>"; };
+		7C80530C1C2FD23100F6A2D4 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		7C80530D1C2FD23100F6A2D4 /* CustomTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
 		B42F5D5BFBBB5CE006BA40A0 /* Pods-iTunesViewer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTunesViewer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iTunesViewer/Pods-iTunesViewer.debug.xcconfig"; sourceTree = "<group>"; };
 		DA757FE97591469AED26286A /* Pods_iTunesViewer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iTunesViewer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -141,6 +145,8 @@
 				7C3FE6A71C22E01A00545EAD /* Main.storyboard */,
 				7C67493B1C23F76900822596 /* CustomCollectionViewCell.swift */,
 				7C67493C1C23F76900822596 /* CustomCollectionViewCell.xib */,
+				7C80530C1C2FD23100F6A2D4 /* CustomTableViewCell.swift */,
+				7C80530D1C2FD23100F6A2D4 /* CustomTableViewCell.xib */,
 				7C3FE6AA1C22E01A00545EAD /* Assets.xcassets */,
 				7C3FE6AC1C22E01A00545EAD /* LaunchScreen.storyboard */,
 				7C3FE6AF1C22E01A00545EAD /* Info.plist */,
@@ -286,6 +292,7 @@
 				7C3FE6AE1C22E01A00545EAD /* LaunchScreen.storyboard in Resources */,
 				7C3FE6AB1C22E01A00545EAD /* Assets.xcassets in Resources */,
 				7C3FE6A91C22E01A00545EAD /* Main.storyboard in Resources */,
+				7C80530F1C2FD23100F6A2D4 /* CustomTableViewCell.xib in Resources */,
 				7C67493E1C23F76900822596 /* CustomCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -360,6 +367,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C3FE6A61C22E01A00545EAD /* ViewController.swift in Sources */,
+				7C80530E1C2FD23100F6A2D4 /* CustomTableViewCell.swift in Sources */,
 				7C67493D1C23F76900822596 /* CustomCollectionViewCell.swift in Sources */,
 				7C6749401C284A4B00822596 /* KeepableValueButton.swift in Sources */,
 				7C3FE6A41C22E01A00545EAD /* AppDelegate.swift in Sources */,
