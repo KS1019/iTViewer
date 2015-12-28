@@ -10,9 +10,10 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-class ViewController: UIViewController/*,UICollectionViewDataSource,UICollectionViewDelegate*/{
+class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate/*,UICollectionViewDataSource,UICollectionViewDelegate*/{
    
     @IBOutlet var collectionViewOfApps: UICollectionView!
+    @IBOutlet var tableViewOfApps:UITableView!
 
     var arrayOfAppName:[String?] = ["Twitter"]
     
@@ -28,6 +29,10 @@ class ViewController: UIViewController/*,UICollectionViewDataSource,UICollection
         //self.setCollectionView()
 
         self.getDataOfApps()
+        
+        self.tableViewOfApps.delegate = self
+        self.tableViewOfApps.dataSource = self
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -106,10 +111,11 @@ class ViewController: UIViewController/*,UICollectionViewDataSource,UICollection
                 }
                 
                 print("reloadData")
-                self.collectionViewOfApps.layoutIfNeeded()
-                self.collectionViewOfApps.layoutSubviews()
-                self.collectionViewOfApps.reloadData()
-                print("reloadedData \(self.collectionViewOfApps)")
+//                self.collectionViewOfApps.layoutIfNeeded()
+//                self.collectionViewOfApps.layoutSubviews()
+//                self.collectionViewOfApps.reloadData()
+                self.tableViewOfApps.reloadData()
+                print("reloadedData \(self.tableViewOfApps)")
 
         }
         let delay = 5.0 * Double(NSEC_PER_SEC)
@@ -122,6 +128,33 @@ class ViewController: UIViewController/*,UICollectionViewDataSource,UICollection
         
            }
     
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.arrayOfAppName.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell: CustomTableViewCell = tableView.dequeueReusableCellWithIdentifier("Cell")! as! CustomTableViewCell
+        //スクリーンショットを表示
+        let url:NSURL = NSURL(string:self.arrayOfURLOfScreenShot[indexPath.row]! as String)!
+        let q_global: dispatch_queue_t = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+        let q_main: dispatch_queue_t  = dispatch_get_main_queue();
+        
+        dispatch_async(q_global, {
+            let imageURL: NSURL = url
+            let imageData: NSData = NSData(contentsOfURL: imageURL)!
+            let image: UIImage = UIImage(data: imageData)!
+            
+            dispatch_async(q_main, {
+                cell.imageViewOfScreenShot?.image = image;
+            })
+        })
+        
+        cell.labelOfAppName.text = self.arrayOfAppName[indexPath.row]! as String
+        cell.buttonOfAppStoreURL?.StringValue = self.arrayOfAppStoreURL[indexPath.row]!
+        
+        return cell
+    }
     
     
     // MARK: - UICollectionViewDelegate Protocol

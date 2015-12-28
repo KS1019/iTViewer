@@ -29,10 +29,10 @@ class CustomCollectionViewCell: UICollectionViewCell {
         super.init(coder: aDecoder)!
     }
     
-    @IBAction func URLButton(){
-        let urlOfAppStore = NSURL(string:(buttonOfAppStoreURL?.loadURLButtonHave())!)
-        let app:UIApplication = UIApplication.sharedApplication()
-        app.openURL(urlOfAppStore!)
-    }
+//    @IBAction func URLButton(){
+//        let urlOfAppStore = NSURL(string:(buttonOfAppStoreURL?.StringValue!),
+//        let app:UIApplication = UIApplication.sharedApplication()
+//        app.openURL(urlOfAppStore!)
+//    }
 
 }

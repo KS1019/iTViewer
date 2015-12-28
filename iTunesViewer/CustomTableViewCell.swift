@@ -10,6 +10,11 @@ import UIKit
 
 class CustomTableViewCell: UITableViewCell {
 
+    
+    @IBOutlet var labelOfAppName: UILabel!
+    @IBOutlet var imageViewOfScreenShot: UIImageView!
+    @IBOutlet var buttonOfAppStoreURL: KeepableValueButton?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -20,5 +25,20 @@ class CustomTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+
+    required init(coder aDecoder: NSCoder){
+        super.init(coder: aDecoder)!
+        labelOfAppName = UILabel()
+        imageViewOfScreenShot = UIImageView()
+        buttonOfAppStoreURL = KeepableValueButton?()
+    }
+    
+    @IBAction func URLButton(){
+        let urlOfAppStore = NSURL(string:(buttonOfAppStoreURL?.StringValue)!)
+        let app:UIApplication = UIApplication.sharedApplication()
+        print("urlOfAppStore -> \(urlOfAppStore)")
+        app.openURL(urlOfAppStore!)
+    }
+
     
 }
