@@ -19,7 +19,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     
     var itunesURL:NSMutableString = "http://appstore.com/"
     var appNameForURL = NSString()
-    var arrayOfAppStoreURL:[String?] = ["appstore.com/Twitter"]
+    var arrayOfAppStoreURL:[String?] = ["http://appstore.com/Twitter"]
     
     var arrayOfURLOfScreenShot:[String?] = ["http://a2.mzstatic.com/jp/r30/Purple1/v4/c3/84/a9/c384a9fb-fb1b-5208-b6e8-cde6a2cde850/screen1136x1136.jpeg"]
     
@@ -151,8 +151,8 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         })
         
         cell.labelOfAppName.text = self.arrayOfAppName[indexPath.row]! as String
-        cell.buttonOfAppStoreURL?.StringValue = self.arrayOfAppStoreURL[indexPath.row]!
-        
+        //cell.buttonOfAppStoreURL?.StringValue = self.arrayOfAppStoreURL[indexPath.row]!
+        print("\nindexPath.row -> \(indexPath.row)\narrayOfAppStoreURL -> \(self.arrayOfAppStoreURL[indexPath.row])")
         return cell
     }
     

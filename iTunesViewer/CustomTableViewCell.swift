@@ -35,6 +35,7 @@ class CustomTableViewCell: UITableViewCell {
     
     @IBAction func URLButton(){
         let urlOfAppStore = NSURL(string:(buttonOfAppStoreURL?.StringValue)!)
+        print("buttonOfAppStoreURL?.StringValue -> \(buttonOfAppStoreURL?.StringValue)")
         let app:UIApplication = UIApplication.sharedApplication()
         print("urlOfAppStore -> \(urlOfAppStore)")
         app.openURL(urlOfAppStore!)
