@@ -28,28 +28,13 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="526"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NJo-eP-a4P" customClass="KeepableValueButton" customModule="iTunesViewer" customModuleProvider="target">
-                                                    <rect key="frame" x="318" y="484" width="49" height="34"/>
-                                                    <state key="normal" title="URL"/>
-                                                    <connections>
-                                                        <action selector="URLButton" destination="F5H-jC-vzE" eventType="touchUpInside" id="JB0-xI-Ktw"/>
-                                                    </connections>
-                                                </button>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AfB-wf-Wni">
                                                     <rect key="frame" x="67" y="72" width="240" height="426"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="AppName" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NuC-UP-tGu">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="61"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="buttonOfAppStoreURL" destination="NJo-eP-a4P" id="wfv-yM-2r9"/>
                                             <outlet property="imageViewOfScreenShot" destination="AfB-wf-Wni" id="UQx-f0-AWF"/>
-                                            <outlet property="labelOfAppName" destination="NuC-UP-tGu" id="ReO-Qs-j8l"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

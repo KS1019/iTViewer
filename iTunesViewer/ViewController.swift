@@ -10,11 +10,11 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate/*,UICollectionViewDataSource,UICollectionViewDelegate*/{
-   
+class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate{
+    
     @IBOutlet var collectionViewOfApps: UICollectionView!
     @IBOutlet var tableViewOfApps:UITableView!
-
+    
     var arrayOfAppName:[String?] = ["Twitter"]
     
     var itunesURL:NSMutableString = "http://appstore.com/"
@@ -26,39 +26,26 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //self.setCollectionView()
-
         self.getDataOfApps()
         
         self.tableViewOfApps.delegate = self
         self.tableViewOfApps.dataSource = self
+        
+        let myBoundSize: CGSize = UIScreen.mainScreen().bounds.size
+        //let myBoundSizeStr: NSString = "Bounds width: \(myBoundSize.width) height: \(myBoundSize.height)"
         
         // Do any additional setup after loading the view, typically from a nib.
     }
     
     override func viewWillAppear(animated: Bool) {
         print("viewWillAppear")
-        //self.setCollectionView()
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-//    func setCollectionView(){
-//        print("setCollectionView")
-//        let layout = UICollectionViewFlowLayout()
-//        layout.sectionInset = UIEdgeInsetsMake(10, 10, 10, 10)
-//        layout.itemSize = CGSizeMake(50, 50)
-//        
-//        collectionViewOfApps.delegate = self
-//        collectionViewOfApps.dataSource = self
-//        collectionViewOfApps = UICollectionView(frame: self.view.frame, collectionViewLayout: layout)
-//        let nib:UINib = UINib(nibName: "CustomCollectionViewCell", bundle: nil)
-//        collectionViewOfApps.registerNib(nib, forCellWithReuseIdentifier: "CellOfAppInformation")
-//        collectionViewOfApps.registerClass(CustomCollectionViewCell.self, forCellWithReuseIdentifier:"CellOfAppInformation")
-//
-//    }
+    
     
     func getDataOfApps(){
         var titles: [String] = [ "A", "F", "G", "L" ]
@@ -113,7 +100,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
                 print("reloadData")
                 self.tableViewOfApps.reloadData()
                 print("reloadedData \(self.tableViewOfApps)")
-
+                
         }
         let delay = 5.0 * Double(NSEC_PER_SEC)
         let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
@@ -123,7 +110,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
             
         })
         
-           }
+    }
     
     // MARK: -UITableViewController Delegate Protocol
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -153,62 +140,6 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         return cell
     }
     
-    
-    // MARK: - UICollectionViewDelegate Protocol
-//    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-//        print("cellForItemAtIndexPath")
-//        let cell:CustomCollectionViewCell = collectionView.dequeueReusableCellWithReuseIdentifier("CellOfAppInformation", forIndexPath: indexPath) as! CustomCollectionViewCell
-//        
-//        // TODO: Fix
-//        //AppNameを表示
-////        cell.labelOfAppName?.text = self.arrayOfAppName[indexPath.row]! as String
-////        
-////        //スクリーンショットを表示
-//        let url:NSURL = NSURL(string:self.arrayOfURLOfScreenShot[indexPath.row]! as String)!
-////        let imgData: NSData?
-////        print("Create image")
-////        
-////        do {
-////            imgData = try NSData(contentsOfURL:url, options: NSDataReadingOptions.DataReadingMappedIfSafe)
-////            let img:UIImage = UIImage(data:imgData!)!;
-////            cell.imageViewOfScreenShot?.image = img
-////        } catch {
-////            print("Error: can't create image.")
-////        }
-////        
-////        
-////        
-////        cell.buttonOfAppStoreURL?.StringValue = self.arrayOfAppStoreURL[indexPath.row]!
-//        
-//        let q_global: dispatch_queue_t = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
-//        let q_main: dispatch_queue_t  = dispatch_get_main_queue();
-//        
-//        dispatch_async(q_global, {
-//            let imageURL: NSURL = url
-//            let imageData: NSData = NSData(contentsOfURL: imageURL)!
-//            let image: UIImage = UIImage(data: imageData)!
-//            
-//            dispatch_async(q_main, {
-//                cell.imageViewOfScreenShot?.image = image;
-//            })
-//        })
-//        cell.labelOfAppName?.text = self.arrayOfAppName[indexPath.row]! as String
-//        cell.buttonOfAppStoreURL?.StringValue = self.arrayOfAppStoreURL[indexPath.row]!
-//        cell.layoutSubviews()
-//
-//        
-//        return cell
-//    }
-//    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
-//        print("numberOfSectionsInCollectionView")
-//        return 1
-//    }
-//    
-//    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        print("numberOfItemsInSection \(self.arrayOfAppName.count)")
-//        return self.arrayOfAppName.count
-//    }
-    // TODO: Replace UICollectiovew to TableView
     
     
 }
