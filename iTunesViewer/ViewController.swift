@@ -111,9 +111,6 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
                 }
                 
                 print("reloadData")
-//                self.collectionViewOfApps.layoutIfNeeded()
-//                self.collectionViewOfApps.layoutSubviews()
-//                self.collectionViewOfApps.reloadData()
                 self.tableViewOfApps.reloadData()
                 print("reloadedData \(self.tableViewOfApps)")
 
@@ -128,7 +125,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         
            }
     
-    
+    // MARK: -UITableViewController Delegate Protocol
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.arrayOfAppName.count
     }
