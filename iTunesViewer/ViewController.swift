@@ -23,6 +23,8 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     
     var arrayOfURLOfScreenShot:[String?] = ["http://a2.mzstatic.com/jp/r30/Purple1/v4/c3/84/a9/c384a9fb-fb1b-5208-b6e8-cde6a2cde850/screen1136x1136.jpeg"]
     
+    let myBoundSize: CGSize = UIScreen.mainScreen().bounds.size
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -31,7 +33,9 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         self.tableViewOfApps.delegate = self
         self.tableViewOfApps.dataSource = self
         
-        let myBoundSize: CGSize = UIScreen.mainScreen().bounds.size
+        tableViewOfApps.estimatedRowHeight = 60
+        tableViewOfApps.rowHeight = UITableViewAutomaticDimension
+        
         //let myBoundSizeStr: NSString = "Bounds width: \(myBoundSize.width) height: \(myBoundSize.height)"
         
         // Do any additional setup after loading the view, typically from a nib.
@@ -119,6 +123,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell: CustomTableViewCell = tableView.dequeueReusableCellWithIdentifier("Cell")! as! CustomTableViewCell
+        cell.imageViewOfScreenShot.bounds.size.height =  myBoundSize.width * 1.77639752
         //スクリーンショットを表示
         let url:NSURL = NSURL(string:self.arrayOfURLOfScreenShot[indexPath.row]! as String)!
         let q_global: dispatch_queue_t = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
@@ -134,12 +139,14 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
             })
         })
         
-        cell.labelOfAppName.text = self.arrayOfAppName[indexPath.row]! as String
+        //cell.labelOfAppName.text = self.arrayOfAppName[indexPath.row]! as String
         //cell.buttonOfAppStoreURL?.StringValue = self.arrayOfAppStoreURL[indexPath.row]!
-        print("\nindexPath.row -> \(indexPath.row)\narrayOfAppStoreURL -> \(self.arrayOfAppStoreURL[indexPath.row])")
+        print("\nAppName -> \(self.arrayOfAppName[indexPath.row]! as String)\nindexPath.row -> \(indexPath.row)\narrayOfAppStoreURL -> \(self.arrayOfAppStoreURL[indexPath.row])\nImageViewBoundsHeight -> \(cell.imageViewOfScreenShot.bounds.size.height)\nImageViewWidth")
+        
         return cell
     }
     
+
     
     
 }
