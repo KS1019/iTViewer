@@ -33,7 +33,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         self.tableViewOfApps.delegate = self
         self.tableViewOfApps.dataSource = self
         
-        tableViewOfApps.estimatedRowHeight = 60
+        tableViewOfApps.estimatedRowHeight = 90
         tableViewOfApps.rowHeight = UITableViewAutomaticDimension
         
         //let myBoundSizeStr: NSString = "Bounds width: \(myBoundSize.width) height: \(myBoundSize.height)"
@@ -123,7 +123,6 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell: CustomTableViewCell = tableView.dequeueReusableCellWithIdentifier("Cell")! as! CustomTableViewCell
-        cell.imageViewOfScreenShot.bounds.size.height =  myBoundSize.width * 1.77639752
         //スクリーンショットを表示
         let url:NSURL = NSURL(string:self.arrayOfURLOfScreenShot[indexPath.row]! as String)!
         let q_global: dispatch_queue_t = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
@@ -135,18 +134,21 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
             let image: UIImage = UIImage(data: imageData)!
             
             dispatch_async(q_main, {
+                let ratio = image.size.height / image.size.width
+                print("\nratio -> \(ratio)")
+                cell.imageViewOfScreenShot.bounds.size.width = self.myBoundSize.width
+                cell.imageViewOfScreenShot.bounds.size.height =  self.myBoundSize.width * ratio
                 cell.imageViewOfScreenShot?.image = image;
             })
         })
         
         //cell.labelOfAppName.text = self.arrayOfAppName[indexPath.row]! as String
-        print("\nAppName -> \(self.arrayOfAppName[indexPath.row]! as String)\nindexPath.row -> \(indexPath.row)\narrayOfAppStoreURL -> \(self.arrayOfAppStoreURL[indexPath.row])\nImageViewBoundsHeight -> \(cell.imageViewOfScreenShot.bounds.size.height)\nImageViewWidth")
+        print("\nAppName -> \(self.arrayOfAppName[indexPath.row]! as String)\nindexPath.row -> \(indexPath.row)\narrayOfAppStoreURL -> \(self.arrayOfAppStoreURL[indexPath.row])\nImageViewBoundsHeight -> \(cell.imageViewOfScreenShot.bounds.size.height)\nImageViewWidth -> \(cell.imageViewOfScreenShot.bounds.size.width)")
         
+        
+        cell.layoutIfNeeded()
         return cell
     }
-    
-    
-    
     
 }
 

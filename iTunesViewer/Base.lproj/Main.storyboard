@@ -29,16 +29,14 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="526"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AfB-wf-Wni">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AfB-wf-Wni">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="526"/>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="AfB-wf-Wni" firstAttribute="top" secondItem="UPG-sr-xvJ" secondAttribute="topMargin" constant="-8" id="1CO-SQ-ibA"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="AfB-wf-Wni" secondAttribute="bottom" constant="-8" id="3BP-I3-tgN"/>
-                                                <constraint firstItem="AfB-wf-Wni" firstAttribute="top" secondItem="UPG-sr-xvJ" secondAttribute="topMargin" id="Bff-AW-Dh9"/>
-                                                <constraint firstItem="AfB-wf-Wni" firstAttribute="leading" secondItem="UPG-sr-xvJ" secondAttribute="leadingMargin" constant="-8" id="fsC-sC-1ak"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="AfB-wf-Wni" secondAttribute="trailing" constant="-8" id="yxo-B6-hza"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="AfB-wf-Wni" secondAttribute="trailing" constant="1" id="9tD-Nt-uIZ"/>
+                                                <constraint firstItem="AfB-wf-Wni" firstAttribute="leading" secondItem="UPG-sr-xvJ" secondAttribute="leadingMargin" constant="1" id="b1q-1G-ceg"/>
+                                                <constraint firstItem="AfB-wf-Wni" firstAttribute="top" secondItem="UPG-sr-xvJ" secondAttribute="topMargin" constant="1" id="hiS-Yz-STg"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
