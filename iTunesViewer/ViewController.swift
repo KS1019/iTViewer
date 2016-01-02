@@ -140,13 +140,12 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         })
         
         //cell.labelOfAppName.text = self.arrayOfAppName[indexPath.row]! as String
-        //cell.buttonOfAppStoreURL?.StringValue = self.arrayOfAppStoreURL[indexPath.row]!
         print("\nAppName -> \(self.arrayOfAppName[indexPath.row]! as String)\nindexPath.row -> \(indexPath.row)\narrayOfAppStoreURL -> \(self.arrayOfAppStoreURL[indexPath.row])\nImageViewBoundsHeight -> \(cell.imageViewOfScreenShot.bounds.size.height)\nImageViewWidth")
         
         return cell
     }
     
-
+    
     
     
 }
