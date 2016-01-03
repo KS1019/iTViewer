@@ -108,17 +108,16 @@
 				0663A693035A9685189A64D1 /* Pods.framework */,
 			);
 			name = Frameworks;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		7C3FE6971C22E01900545EAD = {
 			isa = PBXGroup;
 			children = (
 				7C3FE6A21C22E01A00545EAD /* iTunesViewer */,
-				7C3FE6B71C22E01A00545EAD /* iTunesViewerTests */,
 				7C3FE6C21C22E01A00545EAD /* iTunesViewerUITests */,
 				7C3FE6A11C22E01A00545EAD /* Products */,
 				8ED934E0948624A5245038D8 /* Pods */,
-				48E6DA66764150843D7D5B62 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -154,13 +153,16 @@
 				7C3FE6B81C22E01A00545EAD /* iTunesViewerTests.swift */,
 				7C3FE6BA1C22E01A00545EAD /* Info.plist */,
 			);
-			path = iTunesViewerTests;
+			name = iTunesViewerTests;
+			path = ../iTunesViewerTests;
 			sourceTree = "<group>";
 		};
 		7C3FE6C21C22E01A00545EAD /* iTunesViewerUITests */ = {
 			isa = PBXGroup;
 			children = (
+				7C3FE6B71C22E01A00545EAD /* iTunesViewerTests */,
 				7C3FE6C31C22E01A00545EAD /* iTunesViewerUITests.swift */,
+				48E6DA66764150843D7D5B62 /* Frameworks */,
 				7C3FE6C51C22E01A00545EAD /* Info.plist */,
 			);
 			path = iTunesViewerUITests;

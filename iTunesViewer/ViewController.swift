@@ -47,6 +47,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     
     override func viewWillAppear(animated: Bool) {
         print("viewWillAppear")
+        self.tableViewOfApps.reloadData()
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -115,8 +116,6 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
         dispatch_after(time, dispatch_get_main_queue(), {
             print( "5秒後の世界" )
-            //self.setCollectionView()
-            
         })
         
     }
@@ -128,6 +127,14 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell: CustomTableViewCell = tableView.dequeueReusableCellWithIdentifier("Cell")! as! CustomTableViewCell
+        
+        cell.labelOfAppName.text = arrayOfAppName[indexPath.row]
+        cell.labelOfAppName.sizeToFit()
+        cell.labelOfAppName.numberOfLines = 0
+        cell.labelOfAppName.backgroundColor = UIColor.grayColor()
+        cell.labelOfAppName.alpha = 0.6
+        cell.labelOfAppName.layer.cornerRadius = 3
+        cell.labelOfAppName.clipsToBounds = true
         //スクリーンショットを表示
         let url:NSURL = NSURL(string:self.arrayOfURLOfScreenShot[indexPath.row]! as String)!
         let q_global: dispatch_queue_t = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
@@ -152,6 +159,10 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         return cell
     }
     
+    @IBAction func refresh(){
+        self.getDataOfApps()
+        self.tableViewOfApps.reloadData()
+    }
     //    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
     //        selectedImage = UIImage(named:"\(arrayOfScreenShots[indexPath.row])")
     //        if selectedImage != nil {

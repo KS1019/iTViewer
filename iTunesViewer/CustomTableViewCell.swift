@@ -15,6 +15,8 @@ class CustomTableViewCell: UITableViewCell {
     @IBOutlet var imageViewOfScreenShot: UIImageView!
     @IBOutlet var buttonOfAppStoreURL: KeepableValueButton?
     
+    var label:UILabel = UILabel()
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -31,6 +33,13 @@ class CustomTableViewCell: UITableViewCell {
         labelOfAppName = UILabel()
         imageViewOfScreenShot = UIImageView()
         buttonOfAppStoreURL = KeepableValueButton?()
+        labelOfAppName = UILabel(frame: CGRectMake(0, 0, 100, 0))
+        labelOfAppName.text = ""
+//        labelOfAppName.sizeToFit()
+//        labelOfAppName.backgroundColor = UIColor.grayColor()
+//        labelOfAppName.alpha = 0.5
+//        labelOfAppName.layer.cornerRadius = 3
+//        labelOfAppName.clipsToBounds = true
     }
     
     @IBAction func URLButton(){

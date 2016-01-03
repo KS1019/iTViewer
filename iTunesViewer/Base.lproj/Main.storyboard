@@ -31,10 +31,17 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u0t-Cu-83N">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="666"/>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mCZ-PU-UMI">
+                                                    <rect key="frame" x="8" y="8" width="359" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="imageViewOfScreenShot" destination="u0t-Cu-83N" id="ybR-nx-Gk2"/>
+                                            <outlet property="labelOfAppName" destination="mCZ-PU-UMI" id="klQ-Bz-rBW"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -46,7 +53,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="yUf-2s-cPc"/>
+                    <navigationItem key="navigationItem" id="yUf-2s-cPc">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="5qa-JQ-2h7">
+                            <connections>
+                                <action selector="refresh" destination="BYZ-38-t0r" id="Mzf-kA-QwM"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="tableViewOfApps" destination="URa-Za-RoV" id="9ZP-YL-BJ9"/>
