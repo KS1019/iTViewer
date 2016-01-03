@@ -23,6 +23,10 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     
     var arrayOfURLOfScreenShot:[String?] = ["http://a2.mzstatic.com/jp/r30/Purple1/v4/c3/84/a9/c384a9fb-fb1b-5208-b6e8-cde6a2cde850/screen1136x1136.jpeg"]
     
+    var arrayOfScreenShots:[UIImage?] = []
+    
+    var selectedImage: UIImage? = UIImage()
+    
     let myBoundSize: CGSize = UIScreen.mainScreen().bounds.size
     
     override func viewDidLoad() {
@@ -33,8 +37,8 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         self.tableViewOfApps.delegate = self
         self.tableViewOfApps.dataSource = self
         
-//        tableViewOfApps.estimatedRowHeight = 90
-//        tableViewOfApps.rowHeight = UITableViewAutomaticDimension
+        //tableViewOfApps.estimatedRowHeight = 90
+        //tableViewOfApps.rowHeight = UITableViewAutomaticDimension
         
         //let myBoundSizeStr: NSString = "Bounds width: \(myBoundSize.width) height: \(myBoundSize.height)"
         
@@ -52,10 +56,11 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     
     
     func getDataOfApps(){
-        var titles: [String] = [ "A", "F", "G", "L" ]
-        let index = (Int)(arc4random_uniform(4))
+        var titles: [String] = [ "A", "B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
+        print("\(titles.count)")
+        let index = (Int)(arc4random_uniform(26))
         print("title -> \(titles[index])")
-        let params = ["term":titles[index], "country":"jp", "media":"software", "entity":"software", "limit":"10", "lang":"ja_jp"]
+        let params = ["term":titles[index], "country":"jp", "media":"software", "entity":"software", "limit":"20", "lang":"ja_jp"]
         Alamofire.request(.POST, "https://itunes.apple.com/search", parameters: params)
             .responseJSON{ response in
                 print("\(response.result.value)")
@@ -137,6 +142,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
                 let ratio = image.size.height / image.size.width
                 print("\nratio -> \(ratio)")
                 cell.imageViewOfScreenShot?.image = image;
+                self.arrayOfScreenShots.append(image)
             })
         })
         
@@ -145,6 +151,22 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         
         return cell
     }
+    
+    //    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    //        selectedImage = UIImage(named:"\(arrayOfScreenShots[indexPath.row])")
+    //        if selectedImage != nil {
+    //            // SubViewController へ遷移するために Segue を呼び出す
+    //            performSegueWithIdentifier("toDetailsViewController",sender: nil)
+    //        }
+    //    }
+    //
+    //    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+    //        if (segue.identifier == "toDetailsViewController") {
+    //            let subVC: DetailsViewController = (segue.destinationViewController as? DetailsViewController)!
+    //            // SubViewController のselectedImgに選択された画像を設定する
+    //            subVC.selectedImg! = selectedImage!
+    //        }
+    //    }
     
 }
 

@@ -54,12 +54,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1054.5" y="-490.5"/>
+            <point key="canvasLocation" x="1032.5" y="-490.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Details View Controller-->
         <scene sceneID="Qin-Bh-2SS">
             <objects>
-                <viewController id="I3Y-9M-LVi" sceneMemberID="viewController">
+                <viewController id="I3Y-9M-LVi" customClass="DetailsViewController" customModule="iTunesViewer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aTm-NU-F8C"/>
                         <viewControllerLayoutGuide type="bottom" id="oVJ-wi-aAT"/>
@@ -67,10 +67,18 @@
                     <view key="view" contentMode="scaleToFill" id="Vvc-KH-9qY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="naJ-ma-jwx">
+                                <rect key="frame" x="5" y="219" width="160" height="284"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="DRk-t3-kKJ"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="selactedImageView" destination="naJ-ma-jwx" id="tP7-qe-2jw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="clO-4J-cUJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
