@@ -29,19 +29,23 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="526"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AfB-wf-Wni">
+                                                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KeP-Lo-5Pf">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="526"/>
-                                                </imageView>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lA6-o9-scD" customClass="cus">
+                                                            <rect key="frame" x="0.0" y="0.0" width="375" height="526"/>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailingMargin" secondItem="AfB-wf-Wni" secondAttribute="trailing" constant="1" id="9tD-Nt-uIZ"/>
-                                                <constraint firstItem="AfB-wf-Wni" firstAttribute="leading" secondItem="UPG-sr-xvJ" secondAttribute="leadingMargin" constant="1" id="b1q-1G-ceg"/>
-                                                <constraint firstItem="AfB-wf-Wni" firstAttribute="top" secondItem="UPG-sr-xvJ" secondAttribute="topMargin" constant="1" id="hiS-Yz-STg"/>
+                                                <constraint firstItem="KeP-Lo-5Pf" firstAttribute="leading" secondItem="UPG-sr-xvJ" secondAttribute="leadingMargin" id="0U7-kb-yyD"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="KeP-Lo-5Pf" secondAttribute="bottom" id="HWa-lJ-cgs"/>
+                                                <constraint firstItem="KeP-Lo-5Pf" firstAttribute="top" secondItem="UPG-sr-xvJ" secondAttribute="topMargin" id="Mps-qT-6u7"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="KeP-Lo-5Pf" secondAttribute="trailing" id="k3s-UI-2Dx"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="imageViewOfScreenShot" destination="AfB-wf-Wni" id="UQx-f0-AWF"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>

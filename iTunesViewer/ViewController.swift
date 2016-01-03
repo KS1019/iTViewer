@@ -146,6 +146,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         print("\nAppName -> \(self.arrayOfAppName[indexPath.row]! as String)\nindexPath.row -> \(indexPath.row)\narrayOfAppStoreURL -> \(self.arrayOfAppStoreURL[indexPath.row])\nImageViewBoundsHeight -> \(cell.imageViewOfScreenShot.bounds.size.height)\nImageViewWidth -> \(cell.imageViewOfScreenShot.bounds.size.width)")
         
         
+        cell.setNeedsLayout()
         cell.layoutIfNeeded()
         return cell
     }
