@@ -33,8 +33,8 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         self.tableViewOfApps.delegate = self
         self.tableViewOfApps.dataSource = self
         
-        tableViewOfApps.estimatedRowHeight = 90
-        tableViewOfApps.rowHeight = UITableViewAutomaticDimension
+//        tableViewOfApps.estimatedRowHeight = 90
+//        tableViewOfApps.rowHeight = UITableViewAutomaticDimension
         
         //let myBoundSizeStr: NSString = "Bounds width: \(myBoundSize.width) height: \(myBoundSize.height)"
         
@@ -136,8 +136,6 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
             dispatch_async(q_main, {
                 let ratio = image.size.height / image.size.width
                 print("\nratio -> \(ratio)")
-                cell.imageViewOfScreenShot.bounds.size.width = self.myBoundSize.width
-                cell.imageViewOfScreenShot.bounds.size.height =  self.myBoundSize.width * ratio
                 cell.imageViewOfScreenShot?.image = image;
             })
         })
@@ -145,9 +143,6 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         //cell.labelOfAppName.text = self.arrayOfAppName[indexPath.row]! as String
         print("\nAppName -> \(self.arrayOfAppName[indexPath.row]! as String)\nindexPath.row -> \(indexPath.row)\narrayOfAppStoreURL -> \(self.arrayOfAppStoreURL[indexPath.row])\nImageViewBoundsHeight -> \(cell.imageViewOfScreenShot.bounds.size.height)\nImageViewWidth -> \(cell.imageViewOfScreenShot.bounds.size.width)")
         
-        
-        cell.setNeedsLayout()
-        cell.layoutIfNeeded()
         return cell
     }
     
