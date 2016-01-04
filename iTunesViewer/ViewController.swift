@@ -62,6 +62,10 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         let index = (Int)(arc4random_uniform(26))
         print("title -> \(titles[index])")
         let params = ["term":titles[index], "country":"jp", "media":"software", "entity":"software", "limit":"20", "lang":"ja_jp"]
+        
+        arrayOfAppName = ["Twitter"]
+        arrayOfAppStoreURL = ["http://appstore.com/Twitter"]
+        arrayOfURLOfScreenShot = ["http://a2.mzstatic.com/jp/r30/Purple1/v4/c3/84/a9/c384a9fb-fb1b-5208-b6e8-cde6a2cde850/screen1136x1136.jpeg"]
         Alamofire.request(.POST, "https://itunes.apple.com/search", parameters: params)
             .responseJSON{ response in
                 print("\(response.result.value)")
