@@ -128,6 +128,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell: CustomTableViewCell = tableView.dequeueReusableCellWithIdentifier("Cell")! as! CustomTableViewCell
         
+        //Labelをセット
         cell.labelOfAppName.text = arrayOfAppName[indexPath.row]
         cell.labelOfAppName.sizeToFit()
         cell.labelOfAppName.numberOfLines = 0
@@ -135,6 +136,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         cell.labelOfAppName.alpha = 0.6
         cell.labelOfAppName.layer.cornerRadius = 3
         cell.labelOfAppName.clipsToBounds = true
+        
         //スクリーンショットを表示
         let url:NSURL = NSURL(string:self.arrayOfURLOfScreenShot[indexPath.row]! as String)!
         let q_global: dispatch_queue_t = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
