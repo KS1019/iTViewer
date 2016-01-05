@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		31680F6C033403B0E2481354 /* Pods_iTunesViewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA757FE97591469AED26286A /* Pods_iTunesViewer.framework */; };
+		31680F6C033403B0E2481354 /* Pods_iTunesViewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA757FE97591469AED26286A /* Pods_iTunesViewer.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		7C3FE6A41C22E01A00545EAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C3FE6A31C22E01A00545EAD /* AppDelegate.swift */; };
 		7C3FE6A61C22E01A00545EAD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C3FE6A51C22E01A00545EAD /* ViewController.swift */; };
 		7C3FE6A91C22E01A00545EAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C3FE6A71C22E01A00545EAD /* Main.storyboard */; };
@@ -18,7 +18,7 @@
 		7C6749401C284A4B00822596 /* KeepableValueButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C67493F1C284A4B00822596 /* KeepableValueButton.swift */; };
 		7C80530E1C2FD23100F6A2D4 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C80530C1C2FD23100F6A2D4 /* CustomTableViewCell.swift */; };
 		7C8053111C394F0B00F6A2D4 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8053101C394F0B00F6A2D4 /* DetailsViewController.swift */; };
-		CAF140D93396757F6898294E /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0663A693035A9685189A64D1 /* Pods.framework */; };
+		CAF140D93396757F6898294E /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0663A693035A9685189A64D1 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,19 +37,6 @@
 			remoteInfo = iTunesViewer;
 		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		7C3FE6EB1C22E25600545EAD /* Copy Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-			);
-			name = "Copy Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0663A693035A9685189A64D1 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,6 +105,7 @@
 				7C3FE6C21C22E01A00545EAD /* iTunesViewerUITests */,
 				7C3FE6A11C22E01A00545EAD /* Products */,
 				8ED934E0948624A5245038D8 /* Pods */,
+				C521189AD14999A92E07702C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -177,6 +165,13 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		C521189AD14999A92E07702C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -188,7 +183,6 @@
 				7C3FE69C1C22E01A00545EAD /* Sources */,
 				7C3FE69D1C22E01A00545EAD /* Frameworks */,
 				7C3FE69E1C22E01A00545EAD /* Resources */,
-				7C3FE6EB1C22E25600545EAD /* Copy Frameworks */,
 				2B6638953D50215899DFD23D /* Embed Pods Frameworks */,
 				EB252B11AA1D7617C7E01787 /* Copy Pods Resources */,
 			);
@@ -505,6 +499,10 @@
 			baseConfigurationReference = B42F5D5BFBBB5CE006BA40A0 /* Pods-iTunesViewer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = iTunesViewer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -518,6 +516,10 @@
 			baseConfigurationReference = 5A02E193758D189454EAD2A7 /* Pods-iTunesViewer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = iTunesViewer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
